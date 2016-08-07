@@ -63,8 +63,14 @@ $statement->execute($args);
 
 $ssoUrl = "index.php";
 
-if ($application == "personae") {
-	$ssoUrl = "https://personae.partipirate.org/do_sso.php?secret=$secret&userId=" . $user["id_adh"];
+$urls = array();
+$urls["personae"] = "https://personae.partipirate.org/do_sso.php?secret={secret}&userId={userId}";
+$urls["congressus"] = "https://congressus.partipirate.org/do_sso.php?secret={secret}&userId={userId}";
+
+if (isset($urls[$application])) {
+	$ssoUrl = $urls[$application];
+	$ssoUrl = str_replace("{secret}", $secret, $ssoUrl);
+	$ssoUrl = str_replace("{userId}", $user["id_adh"], $ssoUrl);
 }
 
 header("Location: $ssoUrl");

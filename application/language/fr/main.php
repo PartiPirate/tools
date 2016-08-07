@@ -103,6 +103,14 @@ $lang["breadcrumb_administration"] = "Administration";
 $lang["index_guide"] = "Fabrilia est la boîte à outil du Parti Pirate.";
 $lang["index_connect_button"] = "Se connecter";
 
+$lang["sso_galette"] = "Outil de gestion des informations adhérents";
+$lang["sso_congressus"] = "Outil de gestion de réunion";
+$lang["sso_personae"] = "Outil de délégation liquide";
+$lang["sso_redmine"] = "Outil de suivi des demandes et projets du Parti Pirate";
+$lang["sso_wiki"] = "Wiki du Parti Pirate";
+$lang["sso_forum"] = "Forum du Parti Pirate";
+$lang["sso_ml"] = "Mailing Lists du Parti Pirate";
+
 $lang["connect_guide"] = "Bienvenue sur l'écran de connexion de Fabrilia";
 $lang["connect_form_legend"] = "Connexion";
 $lang["connect_form_loginInput"] = "Identifiant";

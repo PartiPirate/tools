@@ -37,18 +37,32 @@ include_once("header.php");
 
 	<div class="row">
 	
-		<a href="do_start_sso.php?application=galette" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Galette</a>
-		<a href="do_start_sso.php?application=congressus" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Congressus</a>
-		<a href="do_start_sso.php?application=personae" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Personae</a>
-		<a href="do_start_sso.php?application=redmine" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Redmine</a>
+		<a href="do_start_sso.php?application=galette" 
+			title="<?php echo lang("sso_galette"); ?>" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Galette</a>
+		<a href="do_start_sso.php?application=congressus" 
+			title="<?php echo lang("sso_congressus"); ?>" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Congressus</a>
+		<a href="do_start_sso.php?application=personae" 
+			title="<?php echo lang("sso_personae"); ?>" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Personae</a>
+		<a href="do_start_sso.php?application=redmine" 
+			title="<?php echo lang("sso_redmine"); ?>" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Redmine</a>
 	
 	</div>
 
 	<div class="row">
 	
-		<a href="do_start_sso.php?application=wiki" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Wiki</a>
-		<a href="do_start_sso.php?application=forum" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Forum</a>
-		<a href="do_start_sso.php?application=ml" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">ML</a>
+		<a href="do_start_sso.php?application=wiki" 
+			title="<?php echo lang("sso_wiki"); ?>" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Wiki</a>
+		<a href="do_start_sso.php?application=forum" 
+			title="<?php echo lang("sso_forum"); ?>" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">Forum</a>
+		<a href="do_start_sso.php?application=ml" 
+			title="<?php echo lang("sso_ml"); ?>" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-default col-md-3" style="height:150px; padding: 65px 0 0 0;">ML</a>
 	
 	</div>
 
