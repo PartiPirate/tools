@@ -39,6 +39,7 @@ $lang["fabrilia_title"] = "Fabrilia";
 
 $lang["menu_language"] = "Langue : {language}";
 $lang["menu_index"] = "Accueil";
+$lang["menu_rejoin"] = "Réadhérer";
 $lang["menu_mypreferences"] = "Mes préférences";
 $lang["menu_logout"] = "Se déconnecter";
 $lang["menu_login"] = "Se connecter";
@@ -102,6 +103,7 @@ $lang["breadcrumb_administration"] = "Administration";
 
 $lang["index_guide"] = "Fabrilia est la boîte à outil du Parti Pirate.";
 $lang["index_connect_button"] = "Se connecter";
+$lang["index_membership"] = "Il vous reste {days} jours avant d'avoir besoin de <a href=\"rejoin.php\">réadhérer</a>. Fin le {date}.";
 
 $lang["sso_galette"] = "Outil de gestion des informations adhérents";
 $lang["sso_congressus"] = "Outil de gestion de réunion";
@@ -158,5 +160,5 @@ $lang["error_login_ban"] = "Votre IP a été bloquée pour 10mn.";
 $lang["error_login_bad"] = "Vérifier vos identifiants, l'identification a échouée.";
 
 $lang["about_footer"] = "À Propos";
-$lang["Fabrilia_footer"] = "<a href=\"https://www.Fabrilia.net/\" target=\"_blank\">Fabrilia</a> est une application fournie par <a href=\"https://www.partipirate.org\" target=\"_blank\">le Parti Pirate</a>";
+$lang["Fabrilia_footer"] = "<a href=\"https://www.fabrilia.net/\" target=\"_blank\">Fabrilia</a> est une application fournie par <a href=\"https://www.partipirate.org\" target=\"_blank\">le Parti Pirate</a>";
 ?>

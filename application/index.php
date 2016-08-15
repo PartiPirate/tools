@@ -18,7 +18,26 @@
 */
 include_once("header.php");
 
-//include_once("groups.php");
+include_once("engine/bo/GaletteBo.php");
+
+if ($isConnected) {
+	$galetteBo = GaletteBo::newInstance($connection, $config["galette"]["db"]);
+	$member = $galetteBo->getMemberById($sessionUserId);
+	
+	$expirationDate = new DateTime($member["date_echeance"]);
+	$now = new DateTime();
+	
+	$diff = $expirationDate->diff($now);
+
+	$expirationClass = "text-success";
+	
+	if ($diff->days < 8) {
+		$expirationClass = "text-danger";
+	}
+	else if ($diff->days < 15) {
+		$expirationClass = "text-warning";
+	}
+}
 
 ?>
 
@@ -28,12 +47,22 @@ include_once("header.php");
 	</ol>
 
 	<div class="well well-sm">
-		<p><?php echo lang("index_guide"); ?></p>
+		<?php echo lang("index_guide"); ?>
 	</div>
 
 	<br />
 
 <?php 	if ($isConnected) {?>
+
+	<div class="well well-sm <?php echo $expirationClass; ?>">
+		<?php 
+			$message = lang("index_membership");
+			$message = str_replace("{days}", $diff->days, $message);
+			$message = str_replace("{date}", $expirationDate->format(lang("date_format")), $message);
+
+			echo $message;
+		?>
+	</div>
 
 	<div class="row">
 	

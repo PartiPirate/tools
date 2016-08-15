@@ -118,6 +118,7 @@ $connection = openConnection();
 				<ul class="nav navbar-nav">
 					<li <?php if ($page == "index") echo 'class="active"'; ?>><a href="index.php"><?php echo lang("menu_index"); ?><?php if ($page == "index") echo ' <span class="sr-only">(current)</span>'; ?></a></li>
 					<?php 	if ($isConnected) {?>
+					<li <?php if ($page == "rejoin") echo 'class="active"'; ?>><a href="rejoin.php"><?php echo lang("menu_rejoin"); ?><?php if ($page == "rejoin") echo ' <span class="sr-only">(current)</span>'; ?></a></li>
 					<?php 	} else {?>
 					<?php 	}?>
 					
