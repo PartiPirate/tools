@@ -66,6 +66,7 @@ $ssoUrl = "index.php";
 $urls = array();
 $urls["personae"] = "https://personae.partipirate.org/do_sso.php?secret={secret}&userId={userId}";
 $urls["congressus"] = "https://congressus.partipirate.org/do_sso.php?secret={secret}&userId={userId}";
+$urls["galette"] = "https://gestion.partipirate.org/index.php?sso=1&secret={secret}&userId={userId}";
 
 if (isset($urls[$application])) {
 	$ssoUrl = $urls[$application];
