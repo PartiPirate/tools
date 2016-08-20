@@ -20,6 +20,7 @@ include_once("config/database.php");
 require_once("engine/utils/FormUtils.php");
 require_once("engine/utils/LogUtils.php");
 require_once("engine/bo/GaletteBo.php");
+require_once("engine/bo/RedmineBo.php");
 require_once("engine/authenticators/GaletteAuthenticator.php");
 
 session_start();
@@ -29,6 +30,8 @@ xssCleanArray($_REQUEST);
 
 $connection = openConnection();
 $galetteAuthenticator = GaletteAuthenticator::newInstance($connection, $config["galette"]["db"]);
+
+$redmineBo = RedmineBo::newInstance($connection, $config["redmine"]["db"]);
 
 $login = $_REQUEST["login"];
 $password = $_REQUEST["password"];
@@ -56,6 +59,20 @@ if ($member) {
 	$_SESSION["member"] = json_encode($connectedMember);
 	$_SESSION["memberId"] = $member["id_adh"];
 	addLog($_SERVER, $_SESSION, null, array("result" => "ok"));
+	
+	$redmineUser = $redmineBo->getUser($member);
+	if ($redmineUser) {
+		$_SESSION["redminePassword"] = $redmineBo->computePassword($password, $redmineUser);
+		
+		$redmineUser["firstname"] = utf8_encode($redmineUser["firstname"]);
+		$redmineUser["lastname"] = utf8_encode($redmineUser["lastname"]);
+
+//		print_r($redmineUser);
+		
+		$_SESSION["redmineUser"] = json_encode($redmineUser);
+	}
+
+//		exit();
 }
 else {
 	$data["ko"] = "ko";

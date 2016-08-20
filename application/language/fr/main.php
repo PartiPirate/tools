@@ -30,6 +30,8 @@ $lang["common_reject"] = "Rejeter";
 $lang["common_connect"] = "Connecter";
 $lang["common_ask_for_modification"] = "Demander modification";
 $lang["common_save"] = "Sauvegarder";
+$lang["common_yes"] = "Oui";
+$lang["common_no"] = "Non";
 
 $lang["language_fr"] = "Français";
 $lang["language_en"] = "Anglais";
@@ -104,6 +106,16 @@ $lang["breadcrumb_administration"] = "Administration";
 $lang["index_guide"] = "Fabrilia est la boîte à outil du Parti Pirate.";
 $lang["index_connect_button"] = "Se connecter";
 $lang["index_membership"] = "Il vous reste {days} jours avant d'avoir besoin de <a href=\"rejoin.php\">réadhérer</a>. Fin le {date}.";
+$lang["index_redmine_no_account"] = "Vous n'avez pas de compte sur l'outil Redmine.";
+$lang["index_redmine_not_same_password"] = "Votre mot de passe Redmine est différent de celui utilisé de manière centralisée. Voulez-vous le mettre à jour ? ";
+
+$lang["task_issue"] = "Anomalie";
+$lang["task_upgrade"] = "Amélioration";
+$lang["task_document"] = "Documentation";
+$lang["task_task"] = "Tâche";
+$lang["task_assigned_list"] = "Tâches assignées";
+$lang["task_not_assigned_list"] = "Tâches à faire";
+$lang["task_if_you_please"] = "Vous avez le temps, vous avez les compétences, aidez-nous.";
 
 $lang["sso_galette"] = "Outil de gestion des informations adhérents";
 $lang["sso_congressus"] = "Outil de gestion de réunion";
