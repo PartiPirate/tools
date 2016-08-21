@@ -45,10 +45,13 @@ if ($isConnected) {
 		$redmineUser = json_decode($_SESSION["redmineUser"], true);
 		
 		$userTasks = $redmineBo->getTasks(array("no_closed" => true, "assigned_to_id" => $redmineUser["redmine_user_id"], "status" => 1));
+		$notAssignedTasks = $redmineBo->getTasks(array("no_closed" => true, "not_assigned" => true, "status" => 1, "member_user_id" => $redmineUser["redmine_user_id"]));
 	}
 }
 
-$notAssignedTasks = $redmineBo->getTasks(array("no_closed" => true, "not_assigned" => true, "status" => 1));
+if (! isset($notAssignedTasks)) {
+	$notAssignedTasks = $redmineBo->getTasks(array("no_closed" => true, "not_assigned" => true, "status" => 1));
+}
 
 ?>
 

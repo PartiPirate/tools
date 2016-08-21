@@ -104,14 +104,26 @@ class RedmineBo {
 		$query = "	SELECT *, issues.id as issue_id  
 					FROM ".$this->database."issues
 					JOIN ".$this->database."issue_statuses ON status_id = issue_statuses.id 
-					JOIN ".$this->database."projects ON project_id = projects.id
+					JOIN ".$this->database."projects ON issues.project_id = projects.id
+					LEFT JOIN ".$this->database."members ON members.project_id = projects.id
 					WHERE 1=1 	";
 
 		$args = array();
 		
 		if (isset($filters["assigned_to_id"])) {
 			$query .= " AND assigned_to_id = :assigned_to_id";
+			$query .= " AND (members.user_id IS NULL OR members.user_id = :assigned_to_id)";
+			
 			$args["assigned_to_id"] = $filters["assigned_to_id"];
+		}
+		else {
+			if (isset($filters["member_user_id"])) {			
+				$query .= " AND (members.user_id IS NULL OR members.user_id = :member_user_id)";
+				$args["member_user_id"] = $filters["member_user_id"];
+			}
+			else {
+				$query .= " AND members.user_id IS NULL";
+			}
 		}
 
 		if (isset($filters["not_assigned"])) {
@@ -131,7 +143,7 @@ class RedmineBo {
 			$query .= " AND status = :status";
 			$args["status"] = $filters["status"];
 		}
-		
+
 //		echo showQuery($query, $args);
 		
 		$statement = $this->pdo->prepare($query);

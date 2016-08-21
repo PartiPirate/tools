@@ -43,9 +43,9 @@
 					break;
 			}
 ?>			
-				<a href="https://redmine.partipirate.org/issues/<?php echo $task["issue_id"]; ?>"><?php echo utf8_encode($task["subject"]); ?></a>
+				<a href="https://redmine.partipirate.org/issues/<?php echo $task["issue_id"]; ?>" target="_blank"><?php echo utf8_encode($task["subject"]); ?></a>
 				pour
-				<a href="https://redmine.partipirate.org/projects/<?php echo $task["identifier"]; ?>"><?php echo utf8_encode($task["name"]); ?></a>
+				<a href="https://redmine.partipirate.org/projects/<?php echo $task["identifier"]; ?>" target="_blank"><?php echo utf8_encode($task["name"]); ?></a>
 				<?php //print_r($task); ?>
 			</li>
 <?php 	}?>
