@@ -117,12 +117,21 @@ class RedmineBo {
 		if (isset($filters["not_assigned"])) {
 			$query .= " AND assigned_to_id IS NULL";
 		}
-		
+
 		if (isset($filters["no_closed"])) {
 			$query .= " AND is_closed = 0";
 		}
-		
 
+		if (isset($filters["is_public"])) {
+			$query .= " AND is_public = :is_public";
+			$args["is_public"] = $filters["is_public"];
+		}
+
+		if (isset($filters["status"])) {
+			$query .= " AND status = :status";
+			$args["status"] = $filters["status"];
+		}
+		
 //		echo showQuery($query, $args);
 		
 		$statement = $this->pdo->prepare($query);
