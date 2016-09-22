@@ -171,6 +171,12 @@ $lang["error_database_dont_exist"] = "La base de données n'existe pas";
 $lang["error_login_ban"] = "Votre IP a été bloquée pour 10mn.";
 $lang["error_login_bad"] = "Vérifier vos identifiants, l'identification a échouée.";
 
+$lang["skill_level_concepts"] = "Notions";
+$lang["skill_level_average"] = "Niveau moyen";
+$lang["skill_level_good"] = "Bon niveau";
+$lang["skill_level_advanced"] = "Avancé";
+$lang["skill_level_expert"] = "Expert";
+
 $lang["about_footer"] = "À Propos";
 $lang["Fabrilia_footer"] = "<a href=\"https://www.fabrilia.net/\" target=\"_blank\">Fabrilia</a> est une application fournie par <a href=\"https://www.partipirate.org\" target=\"_blank\">le Parti Pirate</a>";
 ?>

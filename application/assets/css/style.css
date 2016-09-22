@@ -1,39 +1,20 @@
 /*
-    Copyright 2015 Cédric Levieux, Parti Pirate
+    Copyright 2015 C�dric Levieux, Parti Pirate
 
-    This file is part of PPMoney.
+    This file is part of Fabrilia.
 
-    PPMoney is free software: you can redistribute it and/or modify
+    Fabrilia is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    PPMoney is distributed in the hope that it will be useful,
+    Fabrilia is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with PPMoney.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
-/*
-    Copyright 2014 Cédric Levieux, Jérémy Collot, ArmagNet
-
-    This file is part of OpenTweetBar.
-
-    OpenTweetBar is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    OpenTweetBar is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with OpenTweetBar.  If not, see <http://www.gnu.org/licenses/>.
+    along with Fabrilia.  If not, see <http://www.gnu.org/licenses/>.
 */
 html,body {
 	height: 100%;
@@ -415,4 +396,26 @@ a.skip-main:focus, a.skip-main:active {
     text-align:center;
     font-size:1.2em;
     z-index:999;
+}
+
+#panel-skills {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: calc((1920px - 1240px) / 2);
+    max-width: calc((1920px - 1240px) / 2);
+}
+
+#panel-skills .panel-heading {
+    border-top-left-radius: 0;
+}
+
+#panel-skills .panel-footer {
+    border-bottom-left-radius: 0;
+}
+
+.btn-group-xxs>.btn, .btn-xxs {
+    padding: 1px 3px;
+    font-size: 10px;
+    line-height: 1.5;
+    border-radius: 3px;
 }
