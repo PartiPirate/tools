@@ -58,13 +58,13 @@ if ($skillUser["sus_skill_id"] == "0") {
 	
 	$skillBo->save($skill);
 	
-	$skillUser["sus_skill_id"] = $skill["ski_id"];
+	$skillUser["sus_skill_id"] = $skill[$skillBo->ID_FIELD];
 }
 
 $skillUserBo->save($skillUser);
 
 // Then remove all endorsments
-$skillEndorsments = $skillEndorsmentBo->getByFilters(array("sen_skill_user_id" => $skillUser["sus_id"]));
+$skillEndorsments = $skillEndorsmentBo->getByFilters(array("sen_skill_user_id" => $skillUser[$skillUserBo->ID_FIELD]));
 foreach($skillEndorsments as $skillEndorsment) {
 	$skillEndorsmentBo->delete($skillEndorsment);
 }

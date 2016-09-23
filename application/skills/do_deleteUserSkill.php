@@ -49,7 +49,7 @@ if ($skillUser["sus_user_id"] != $userId) {
 }
 
 // Then remove all endorsments
-$skillEndorsments = $skillEndorsmentBo->getByFilters(array("sen_skill_user_id" => $skillUser["sus_id"]));
+$skillEndorsments = $skillEndorsmentBo->getByFilters(array("sen_skill_user_id" => $skillUser[$skillUserBo->ID_FIELD]));
 foreach($skillEndorsments as $skillEndorsment) {
 	$skillEndorsmentBo->delete($skillEndorsment);
 }

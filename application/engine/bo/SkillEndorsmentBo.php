@@ -21,7 +21,7 @@ class SkillEndorsmentBo {
 	var $pdo = null;
 	var $galetteDatabase = "";
 
-	var $TABLE = "skill_endorsment";
+	var $TABLE = "skill_endorsments";
 	var $ID_FIELD = "sen_id";
 
 	function __construct($pdo, $config) {
@@ -38,7 +38,7 @@ class SkillEndorsmentBo {
 		$query = "	INSERT INTO ".$this->galetteDatabase."$this->TABLE () VALUES ()	";
 
 		$statement = $this->pdo->prepare($query);
-//				echo showQuery($query, $args);
+//		echo showQuery($query, $skillEndorsment);
 
 		try {
 			$statement->execute();
@@ -64,7 +64,6 @@ class SkillEndorsmentBo {
 		}
 
 		$query .= "	WHERE $this->ID_FIELD = :$this->ID_FIELD ";
-
 //		echo showQuery($query, $skillEndorsment);
 
 		$statement = $this->pdo->prepare($query);
@@ -92,6 +91,50 @@ class SkillEndorsmentBo {
 		$statement->execute($args);
 	}
 
+	function getRandomSkillUser($userId) {
+		$query = "	SELECT *
+					FROM ".$this->galetteDatabase."skill_users
+					JOIN ".$this->galetteDatabase."skills ON ski_id = sus_skill_id
+					JOIN ".$this->galetteDatabase."galette_adherents ON id_adh = sus_user_id
+					LEFT JOIN ".$this->galetteDatabase."skill_endorsments ON sus_id = sen_skill_user_id AND sen_user_id = :id_adh
+					WHERE 1
+					AND sus_user_id != :id_adh
+					AND sen_id IS NULL
+					ORDER BY rand()	
+					LIMIT 0, 1 ";
+
+		$args["id_adh"] = $userId;
+		
+		$statement = $this->pdo->prepare($query);
+//		echo showQuery($query, $args);
+		
+		$results = array();
+
+		try {
+			$statement->execute($args);
+			$results = $statement->fetchAll();
+
+			foreach($results as $index => $line) {
+				foreach($line as $field => $value) {
+					if (is_numeric($field)) {
+						unset($results[$index][$field]);
+					}
+				}
+			}
+		}
+		catch(Exception $e){
+			echo 'Erreur de requète : ', $e->getMessage();
+		}
+
+		if (count($results)) {
+//			print_r($results[0]);
+			
+			return $results[0];
+		}
+		
+		return null;
+	}
+	
 	function getById($id) {
 		$filters = array($this->ID_FIELD => intval($id));
 

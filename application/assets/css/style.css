@@ -1,5 +1,5 @@
 /*
-    Copyright 2015 Cédric Levieux, Parti Pirate
+    Copyright 2015 Cï¿½dric Levieux, Parti Pirate
 
     This file is part of Fabrilia.
 
@@ -411,6 +411,22 @@ a.skip-main:focus, a.skip-main:active {
 
 #panel-skills .panel-footer {
     border-bottom-left-radius: 0;
+}
+
+
+#panel-endorsments {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: calc((1920px - 1240px) / 2);
+    max-width: calc((1920px - 1240px) / 2);
+}
+
+#panel-endorsments .panel-heading {
+    border-top-right-radius: 0;
+}
+
+#panel-endorsments .panel-footer {
+    border-bottom-right-radius: 0;
 }
 
 .btn-group-xxs>.btn, .btn-xxs {

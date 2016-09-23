@@ -177,6 +177,13 @@ $lang["skill_level_good"] = "Bon niveau";
 $lang["skill_level_advanced"] = "Avancé";
 $lang["skill_level_expert"] = "Expert";
 
+$lang["skill_endorsment_need_approval"] = "{identity} a indiqué être {level} en &laquo;&nbsp;{skill}&nbsp;&raquo;";
+$lang["skill_endorsment_level_concepts"] = "novice";
+$lang["skill_endorsment_level_average"] = "d'un niveau moyen";
+$lang["skill_endorsment_level_good"] = "d'un bon niveau";
+$lang["skill_endorsment_level_advanced"] = "avancé";
+$lang["skill_endorsment_level_expert"] = "expert";
+
 $lang["about_footer"] = "À Propos";
 $lang["Fabrilia_footer"] = "<a href=\"https://www.fabrilia.net/\" target=\"_blank\">Fabrilia</a> est une application fournie par <a href=\"https://www.partipirate.org\" target=\"_blank\">le Parti Pirate</a>";
 ?>

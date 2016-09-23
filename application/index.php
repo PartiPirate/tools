@@ -36,6 +36,8 @@ if ($isConnected) {
 	$skills = $skillBo->getByFilters(array());
 	$userSkills = $skillUserBo->getByFilters(array("sus_user_id" => $sessionUserId, "with_label" => true));
 	
+	$randomUserSkill = $skillEndorsmentBo->getRandomSkillUser($sessionUserId);
+	
 	$member = $galetteBo->getMemberById($sessionUserId);
 	
 	$expirationDate = new DateTime($member["date_echeance"]);
@@ -101,7 +103,61 @@ if (! isset($notAssignedTasks)) {
 			<button class="btn btn-default btn-xs btn-add-skill"><span class="glyphicon glyphicon-plus"></span> Ajouter</button>
 		</div>
 	</div>
+
+	<?php 	if ($randomUserSkill) { ?>
+
+	<div id="panel-endorsments" class="panel panel-default pull-right">
+		<div class="panel-heading">
+			<h3 class="panel-title">Une approbation ?</h3>
+		</div>
+		<div class="panel-body">
+			<span 
+				class="data"
+				data-id="<?php echo $randomUserSkill["sus_id"]?>" 
+				data-skill-label="<?php echo $randomUserSkill["ski_label"]?>" 
+				data-identity="<?php echo GaletteBo::showIdentity($randomUserSkill); ?>">
+			<?php 
+				$message = lang("skill_endorsment_need_approval");
+				
+				$message = str_replace("{identity}", GaletteBo::showIdentity($randomUserSkill), $message);
+				$message = str_replace("{level}", lang("skill_endorsment_level_" . $randomUserSkill["sus_level"]), $message);
+				$message = str_replace("{skill}", $randomUserSkill["ski_label"], $message);
+				
+				echo $message;
+			?>
+			</span>
+		</div>
+		<div class="panel-footer text-right">
+			<button class="btn btn-default btn-xs btn-endorse-skill"><span class="glyphicon glyphicon-thumbs-up"></span> Approuver</button>
+			<button class="btn btn-default btn-xs btn-refresh-skill"><span class="glyphicon glyphicon-refresh"></span></button>
+		</div>
+	</div>
 	
+<?php 		}?>
+
+	<div id="dialog-endorse-skill" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Approuver la compétence de <span class="skill-user-identity"></span></h4>
+				</div>
+				<div class="modal-body">
+					Approuver la compétence de <span class="skill-user-identity"></span> : <span class="skill-label"></span>
+					<form>
+						<input type="hidden" name="sus_id">
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+					<button type="button" class="btn btn-ok btn-success">Approuver</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="dialog-delete-skill" class="modal fade" tabindex="-1" role="dialog">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -109,7 +165,7 @@ if (! isset($notAssignedTasks)) {
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h4 class="modal-title">Supprimer la compétence "<span class="skill-label"></span>"</h4>
+					<h4 class="modal-title">Supprimer la compétence &laquo;<span class="skill-label"></span>&raquo;</h4>
 				</div>
 				<div class="modal-body">
 					Supprimer cette compétence de votre liste ?
@@ -193,7 +249,7 @@ if (! isset($notAssignedTasks)) {
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
-					<h4 class="modal-title">Modifier votre compétence "<span class="skill-label"></span>"</h4>
+					<h4 class="modal-title">Modifier votre compétence &laquo;<span class="skill-label"></span>&raquo;</h4>
 				</div>
 				<div class="modal-body">
 	

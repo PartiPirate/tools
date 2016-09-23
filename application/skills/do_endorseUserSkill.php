@@ -21,34 +21,37 @@ if (!isset($api)) exit();
 
 $connection = openConnection();
 
-include_once("engine/bo/SkillBo.php");
 include_once("engine/bo/SkillUserBo.php");
+include_once("engine/bo/SkillEndorsmentBo.php");
 
 $userId = SessionUtils::getUserId($_SESSION);
 
 if (!$userId) {
 	echo json_encode(array("ko" => "ko", "message" => "must_be_connected"));
+	exit();
 }
 
-$skillBo = SkillBo::newInstance($connection, $config);
 $skillUserBo = SkillUserBo::newInstance($connection, $config);
+$skillEndorsmentBo = SkillEndorsmentBo::newInstance($connection, $config);
 
-$skillUser = array();
-$skillUser["sus_user_id"] = $userId;
-$skillUser["sus_skill_id"] = $_REQUEST["sus_skill_id"];
-$skillUser["sus_level"] = $_REQUEST["sus_level"];
+$skillUser = $skillUserBo->getById($_REQUEST["sus_id"]);
 
-// If the id of the skill is 0, it's a new one
-if ($skillUser["sus_skill_id"] == "0") {
-	$skill = array();
-	$skill["ski_label"] = $_REQUEST["sus_label"];
-	
-	$skillBo->save($skill);
-	
-	$skillUser["sus_skill_id"] = $skill[$skillBo->ID_FIELD];
+if (!$skillUser) {
+	echo json_encode(array("ko" => "ko", "message" => "no_skill_user"));
+	exit();
 }
 
-$skillUserBo->save($skillUser);
+if ($skillUser["sus_user_id"] == $userId) {
+	echo json_encode(array("ko" => "ko", "message" => "cant_endorse_own_user_skill"));
+	exit();
+}
+
+$skillEndorsment = array();
+$skillEndorsment["sen_skill_user_id"] = $skillUser[$skillUserBo->ID_FIELD];
+$skillEndorsment["sen_user_id"] = $userId;
+$skillEndorsment["sen_is_anonymous"] = 0;
+
+$skillEndorsmentBo->save($skillEndorsment);
 
 $data = array();
 $data["ok"] = "ok";
