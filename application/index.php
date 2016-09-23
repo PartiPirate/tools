@@ -34,7 +34,7 @@ if ($isConnected) {
 	$skillEndorsmentBo = SkillEndorsmentBo::newInstance($connection, $config);
 
 	$skills = $skillBo->getByFilters(array());
-	$userSkills = $skillUserBo->getByFilters(array("sus_user_id" => $sessionUserId, "with_label" => true));
+	$userSkills = $skillUserBo->getByFilters(array("sus_user_id" => $sessionUserId, "with_label" => true, "with_endorsments" => true));
 	
 	$randomUserSkill = $skillEndorsmentBo->getRandomSkillUser($sessionUserId);
 	
@@ -82,7 +82,13 @@ if (! isset($notAssignedTasks)) {
 				foreach($userSkills as $userSkill) {
 	?>
 	<div class="row">
-		<div class="col-md-6"><?php echo $userSkill["ski_label"]; ?></div>
+		<div class="col-md-6"><?php echo $userSkill["ski_label"]; ?> <?php
+			if ($userSkill["sus_total_endorsments"]) {
+				echo "(";
+				echo $userSkill["sus_total_endorsments"]; 
+				echo ")";
+			}
+		?></div>
 		<div class="col-md-3"><?php echo lang("skill_level_" . $userSkill["sus_level"]); ?></div>
 		<div class="col-md-3 text-right">
 			<button class="btn btn-primary btn-xxs btn-modify-skill" 

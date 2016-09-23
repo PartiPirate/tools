@@ -108,13 +108,18 @@ class SkillUserBo {
 		if (!$filters) $filters = array();
 		$args = array();
 
-		$query = "	SELECT *
-					FROM ".$this->galetteDatabase."$this->TABLE ";
-							
+		$query = "	SELECT * ";
+
+		if (isset($filters["with_endorsments"]) && $filters["with_endorsments"]) {
+			$query .= ", (SELECT COUNT(*) FROM ".$this->galetteDatabase."skill_endorsments WHERE sen_skill_user_id = sus_id) AS sus_total_endorsments \n";
+		}
+
+		$query .= "	FROM ".$this->galetteDatabase."$this->TABLE ";
+
 		if (isset($filters["with_label"]) && $filters["with_label"]) {
 			$query .= " JOIN ".$this->galetteDatabase."skills ON sus_skill_id = ski_id \n";
 		}
-					
+
 		$query .= "	WHERE
 						1 = 1 \n";
 
@@ -122,7 +127,7 @@ class SkillUserBo {
 			$args[$this->ID_FIELD] = $filters[$this->ID_FIELD];
 			$query .= " AND $this->ID_FIELD = :$this->ID_FIELD \n";
 		}
-		
+
 		if (isset($filters["sus_user_id"])) {
 			$args["sus_user_id"] = $filters["sus_user_id"];
 			$query .= " AND sus_user_id = :sus_user_id \n";
