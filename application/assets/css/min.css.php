@@ -30,11 +30,12 @@ if (!$css || isset($_REQUEST["renew"])) {
 	include ('font-awesome.min.css');
 	include ('ekko-lightbox.min.css');
 	include ('jquery.template.css');
+	include ('jquery-ui.min.css');
 	include ('calendar.min.css');
 	include ('flags.css');
 	include ('social.css');
 	include ('style.css');
-
+	
 	$css = ob_get_clean();
 	
 	$css = compress($css);

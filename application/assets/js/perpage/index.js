@@ -141,4 +141,14 @@ $(function() {
 			$(".div-upgrade-redmine-password").remove();
 		}, "json");
 	});
+	
+//	$(".panel").resizable({
+//		grid: [20, 20],
+//		animate: true
+//	});
+	
+	$(".panel").draggable({
+		handle: ".panel-heading",
+		grid: [20, 20]
+	});
 });

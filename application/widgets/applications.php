@@ -52,8 +52,8 @@ if ($isConnected) {
 	</div>
 <br>
 	<div class="text-center" style="margin:0;">
-		<button class="btn btn-success btn-xs">SSO OK</button>
-		<button class="btn btn-warning  btn-xs">SSO KO</button>
+		<button class="btn btn-success btn-xs">Applications accessibles directement sans réidentification</button>
+		<button class="btn btn-warning  btn-xs">Application où vous devez vous réidentifier</button>
 	</div>
 <br>
 

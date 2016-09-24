@@ -23,6 +23,7 @@ if (!$js) {
 	include ('bootbox.min.js');
 	include ('moment-with-locales.js');
 	include ('bootstrap-datetimepicker.js');
+	include ('jquery-ui.min.js');
 	include ('jquery.timer.js');
 	include ('jquery.scrollTo.min.js');
 	include ('jquery.template.js');

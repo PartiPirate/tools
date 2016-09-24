@@ -52,11 +52,13 @@ if ($isConnected) {
 		<div class="col-md-3"><?php echo lang("skill_level_" . $userSkill["sus_level"]); ?></div>
 		<div class="col-md-3 text-right">
 			<button class="btn btn-primary btn-xxs btn-modify-skill" 
+				title="Modifier cette compétence" data-toggle="tooltip" data-placement="bottom"
 				data-id="<?php echo $userSkill["sus_id"]; ?>" 
 				data-skill-level="<?php echo $userSkill["sus_level"]; ?>"
 				data-skill-label="<?php echo $userSkill["ski_label"]; ?>"
 				data-skill-id="<?php echo $userSkill["sus_skill_id"]; ?>"><span class="glyphicon glyphicon-cog"></span></button>
-			<button class="btn btn-danger btn-xxs btn-delete-skill" 
+			<button class="btn btn-danger btn-xxs btn-delete-skill"
+				title="Supprimer cette compétence" data-toggle="tooltip" data-placement="bottom" 
 				data-id="<?php echo $userSkill["sus_id"]; ?>" 
 				data-skill-label="<?php echo $userSkill["ski_label"]; ?>"><span class="glyphicon glyphicon-minus"></span></button>
 		</div>

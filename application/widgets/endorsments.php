@@ -54,7 +54,9 @@ if ($isConnected) {
 		</div>
 		<div class="panel-footer text-right">
 			<button class="btn btn-default btn-xs btn-endorse-skill"><span class="glyphicon glyphicon-thumbs-up"></span> Approuver</button>
-			<button class="btn btn-default btn-xs btn-refresh-skill"><span class="glyphicon glyphicon-refresh"></span></button>
+			<button class="btn btn-default btn-xs btn-refresh-skill"
+				title="Rafraîchir" data-toggle="tooltip" data-placement="bottom"
+			><span class="glyphicon glyphicon-refresh"></span></button>
 		</div>
 	</div>
 	
