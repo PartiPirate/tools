@@ -24,6 +24,7 @@ include_once("header.php");
 <?php include("widgets/endorsments.php"); ?>
 
 <div class="container theme-showcase" role="main" id="main" tabindex="-1">
+
 	<ol class="breadcrumb">
 		<li class="active"><?php echo lang("breadcrumb_index"); ?></li>
 	</ol>

@@ -93,6 +93,8 @@ require_once("engine/utils/SessionUtils.php");
 
 </div>
 
+<div class="lastDiv"></div>
+
 <script type="text/javascript">
 var userLanguage = '<?php echo SessionUtils::getLanguage($_SESSION); ?>';
 var mypreferences_validation_mail_already_taken = "<?php echo lang("mypreferences_validation_mail_already_taken"); ?>";

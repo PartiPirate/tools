@@ -21,7 +21,7 @@ include_once("header.php");
 ?>
 <div class="container theme-showcase" role="main">
 	<ol class="breadcrumb">
-		<li><?php echo lang("breadcrumb_index"); ?></li>
+		<li><a href="index.php"><?php echo lang("breadcrumb_index"); ?></a></li>
 		<li class="active"><?php echo lang("breadcrumb_about"); ?></li>
 	</ol>
 
