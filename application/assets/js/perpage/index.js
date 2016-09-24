@@ -8,7 +8,7 @@ function updateSkills() {
 
 function updateEndorsments() {
 	$.get("index.php", {}, function(data) {
-		var children = $(data).filter("#skills").find("#panel-endorsments .panel-body").children();
+		var children = $(data).filter("#endorsments").find("#panel-endorsments .panel-body").children();
 		$("#panel-endorsments .panel-body").children().remove();
 		$("#panel-endorsments .panel-body").append(children);
 	}, "html");
