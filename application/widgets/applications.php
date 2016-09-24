@@ -20,8 +20,8 @@
 if ($isConnected) {
 ?>
 
-	<div class="text-center" style="margin:0;">
-	
+<div id="applications" class="text-center" style="margin:0;">
+	<div>	
 		<a href="do_start_sso.php?application=galette" 
 			title="<?php echo lang("sso_galette"); ?>" data-toggle="tooltip" data-placement="bottom"
 			target="_blank" class="btn btn-success col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Galette</a>
@@ -37,8 +37,7 @@ if ($isConnected) {
 	
 	</div>
 <br>
-	<div class="text-center" style="margin:0;">
-	
+	<div>	
 		<a href="https://wiki.partipirate.org/" data-href="do_start_sso.php?application=wiki" 
 			title="<?php echo lang("sso_wiki"); ?>" data-toggle="tooltip" data-placement="bottom"
 			target="_blank" class="btn btn-warning col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Wiki</a>
@@ -51,12 +50,12 @@ if ($isConnected) {
 	
 	</div>
 <br>
-	<div class="text-center" style="margin:0;">
+	<div>	
 		<button class="btn btn-success btn-xs">Applications accessibles directement sans réidentification</button>
 		<button class="btn btn-warning  btn-xs">Application où vous devez vous réidentifier</button>
 	</div>
 <br>
-
+</div>
 
 <?php
 }

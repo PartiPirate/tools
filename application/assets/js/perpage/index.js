@@ -151,4 +151,8 @@ $(function() {
 		handle: ".panel-heading",
 		grid: [20, 20]
 	});
+	$(".panel, #applications").draggable({
+		cancel: "a",
+		grid: [20, 20]
+	});
 });
