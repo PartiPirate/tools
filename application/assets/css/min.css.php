@@ -27,13 +27,13 @@ if (!$css || isset($_REQUEST["renew"])) {
 	// <!-- Bootstrap -->
 	include ('bootstrap.min.css');
 	include ('bootstrap-datetimepicker.min.css');
+	include ('font-awesome.min.css');
 	include ('ekko-lightbox.min.css');
 	include ('jquery.template.css');
 	include ('calendar.min.css');
 	include ('flags.css');
 	include ('social.css');
 	include ('style.css');
-	include ('font-awesome.min.css');
 
 	$css = ob_get_clean();
 	
@@ -48,26 +48,26 @@ if (!$css || isset($_REQUEST["renew"])) {
 		$memcache->set($memcacheKey, $css, MEMCACHE_COMPRESSED, 3600);
 	}
 }
-else {
-//	header("HTTP/1.1 304 Not Modified");	
-	$tsstring = gmdate('D, d M Y H:i:s ', $ts) . 'GMT';
-	$etag = md5($ts . $memcacheKey);
+// else {
+// //	header("HTTP/1.1 304 Not Modified");	
+// 	$tsstring = gmdate('D, d M Y H:i:s ', $ts) . 'GMT';
+// 	$etag = md5($ts . $memcacheKey);
 
-	$if_modified_since = isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) ? $_SERVER['HTTP_IF_MODIFIED_SINCE'] : false;
-	$if_none_match = isset($_SERVER['HTTP_IF_NONE_MATCH']) ? $_SERVER['HTTP_IF_NONE_MATCH'] : false;
+// 	$if_modified_since = isset($_SERVER['HTTP_IF_MODIFIED_SINCE']) ? $_SERVER['HTTP_IF_MODIFIED_SINCE'] : false;
+// 	$if_none_match = isset($_SERVER['HTTP_IF_NONE_MATCH']) ? $_SERVER['HTTP_IF_NONE_MATCH'] : false;
 
-	if ((($if_none_match && $if_none_match == $etag) || (!$if_none_match)) &&
-			($if_modified_since && $if_modified_since == $tsstring))
-	{
-		header('HTTP/1.1 304 Not Modified');
-		exit();
-	}
-	else
-	{
-		header("Last-Modified: $tsstring");
-		header("ETag: \"{$etag}\"");
-	}	
-}
+// 	if ((($if_none_match && $if_none_match == $etag) || (!$if_none_match)) &&
+// 			($if_modified_since && $if_modified_since == $tsstring))
+// 	{
+// 		header('HTTP/1.1 304 Not Modified');
+// 		exit();
+// 	}
+// 	else
+// 	{
+// 		header("Last-Modified: $tsstring");
+// 		header("ETag: \"{$etag}\"");
+// 	}	
+// }
 
 echo $css;
 
