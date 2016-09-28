@@ -34,7 +34,7 @@ if ($isConnected) {
 		<div class="panel-heading">
 			<h3 class="panel-title">Vos compétences</h3>
 		</div>
-		<div class="panel-body">
+		<div class="panel-body row-striped row-hover" style="padding: 0 15px;">
 	<?php 	if (!count($userSkills)) {
 				echo "Pas de compétence, peut-être voudriez vous en ajouter ?";
 			}
