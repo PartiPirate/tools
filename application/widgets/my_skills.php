@@ -30,7 +30,7 @@ if ($isConnected) {
 
 ?>
 <div id="skills">
-	<div id="panel-skills" class="panel panel-default pull-left">
+	<div id="panel-skills" class="panel panel-default pull-left" style="z-index: 1000;">
 		<div class="panel-heading">
 			<h3 class="panel-title">Vos compétences</h3>
 		</div>
