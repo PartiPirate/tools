@@ -47,6 +47,9 @@ if ($isConnected) {
 		<a href="https://lists.partipirate.org/" data-href="do_start_sso.php?application=ml" 
 			title="<?php echo lang("sso_ml"); ?>" data-toggle="tooltip" data-placement="bottom"
 			target="_blank" class="btn btn-warning col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">ML</a>
+		<a href="https://framapad.org/" title="Framapad" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-warning col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Framapad</a>
+	
 	
 	</div>
 <br>
