@@ -6,6 +6,7 @@
 .btn-default,
 .btn-primary,
 .btn-success,
+.btn-external,
 .btn-info,
 .btn-warning,
 .btn-danger {
@@ -16,12 +17,14 @@
 .btn-default:active,
 .btn-primary:active,
 .btn-success:active,
+.btn-external:active,
 .btn-info:active,
 .btn-warning:active,
 .btn-danger:active,
 .btn-default.active,
 .btn-primary.active,
 .btn-success.active,
+.btn-external.active,
 .btn-info.active,
 .btn-warning.active,
 .btn-danger.active {
@@ -31,18 +34,21 @@
 .btn-default.disabled,
 .btn-primary.disabled,
 .btn-success.disabled,
+.btn-external.disabled,
 .btn-info.disabled,
 .btn-warning.disabled,
 .btn-danger.disabled,
 .btn-default[disabled],
 .btn-primary[disabled],
 .btn-success[disabled],
+.btn-external[disabled],
 .btn-info[disabled],
 .btn-warning[disabled],
 .btn-danger[disabled],
 fieldset[disabled] .btn-default,
 fieldset[disabled] .btn-primary,
 fieldset[disabled] .btn-success,
+fieldset[disabled] .btn-external,
 fieldset[disabled] .btn-info,
 fieldset[disabled] .btn-warning,
 fieldset[disabled] .btn-danger {
@@ -52,6 +58,7 @@ fieldset[disabled] .btn-danger {
 .btn-default .badge,
 .btn-primary .badge,
 .btn-success .badge,
+.btn-external .badge,
 .btn-info .badge,
 .btn-warning .badge,
 .btn-danger .badge {
@@ -184,6 +191,47 @@ fieldset[disabled] .btn-success:active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
   background-color: #419641;
+  background-image: none;
+}
+external {
+  background-image: -webkit-linear-gradient(top, #5c97b8 0%, #417796 100%);
+  background-image:      -o-linear-gradient(top, #5c97b8 0%, #417796 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5c97b8), to(#417796));
+  background-image:         linear-gradient(to bottom, #5c97b8 0%, #417796 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5c97b8', endColorstr='#ff417796', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #3e8f3e;
+}
+.btn-external:hover,
+.btn-external:focus {
+  background-color: #417796;
+  background-position: 0 -15px;
+}
+.btn-external:active,
+.btn-external.active {
+  background-color: #417796;
+  border-color: #3e8f3e;
+}
+.btn-external.disabled,
+.btn-external[disabled],
+fieldset[disabled] .btn-external,
+.btn-external.disabled:hover,
+.btn-external[disabled]:hover,
+fieldset[disabled] .btn-external:hover,
+.btn-external.disabled:focus,
+.btn-external[disabled]:focus,
+fieldset[disabled] .btn-external:focus,
+.btn-external.disabled.focus,
+.btn-external[disabled].focus,
+fieldset[disabled] .btn-external.focus,
+.btn-external.disabled:active,
+.btn-external[disabled]:active,
+fieldset[disabled] .btn-external:active,
+.btn-external.disabled.active,
+.btn-external[disabled].active,
+fieldset[disabled] .btn-external.active {
+  background-color: #417796;
   background-image: none;
 }
 .btn-info {

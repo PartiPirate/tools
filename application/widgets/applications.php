@@ -47,15 +47,23 @@ if ($isConnected) {
 		<a href="https://lists.partipirate.org/" data-href="do_start_sso.php?application=ml" 
 			title="<?php echo lang("sso_ml"); ?>" data-toggle="tooltip" data-placement="bottom"
 			target="_blank" class="btn btn-warning col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">ML</a>
+	
+	
+	</div>
+<br>
+	<div>	
 		<a href="https://framapad.org/" title="Framapad" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-warning col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Framapad</a>
+			target="_blank" class="btn btn-external col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Framapad</a>
+		<a href="https://www.opentweetbar.net/" title="OpenTweetBar" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-external col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">OpenTweetBar</a>
 	
 	
 	</div>
 <br>
 	<div>	
 		<button class="btn btn-success btn-xs">Applications accessibles directement sans réidentification</button>
-		<button class="btn btn-warning  btn-xs">Application où vous devez vous réidentifier</button>
+		<button class="btn btn-warning  btn-xs">Application où vous devez vous réidentifier</button><br />
+		<button class="btn btn-external  btn-xs">Application externes utilisées par les Pirates</button>
 	</div>
 <br>
 </div>
