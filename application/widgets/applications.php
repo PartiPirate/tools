@@ -24,40 +24,35 @@ if ($isConnected) {
 	<div>	
 		<a href="do_start_sso.php?application=galette" 
 			title="<?php echo lang("sso_galette"); ?>" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-success col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Galette</a>
+			target="_blank" class="btn btn-success col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Galette</a>
 		<a href="do_start_sso.php?application=congressus" 
 			title="<?php echo lang("sso_congressus"); ?>" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-success col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Congressus</a>
+			target="_blank" class="btn btn-success col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Congressus</a>
 		<a href="do_start_sso.php?application=personae" 
 			title="<?php echo lang("sso_personae"); ?>" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-success col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Personae</a>
-		<a href="https://redmine.partipirate.org/" data-href="do_start_sso.php?application=redmine" 
-			title="<?php echo lang("sso_redmine"); ?>" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-warning col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Redmine</a>
-	
+			target="_blank" class="btn btn-success col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Personae</a>
 	</div>
 <br>
 	<div>	
+		<a href="https://redmine.partipirate.org/" data-href="do_start_sso.php?application=redmine" 
+			title="<?php echo lang("sso_redmine"); ?>" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-warning col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Redmine</a>
 		<a href="https://wiki.partipirate.org/" data-href="do_start_sso.php?application=wiki" 
 			title="<?php echo lang("sso_wiki"); ?>" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-warning col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Wiki</a>
+			target="_blank" class="btn btn-warning col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Wiki</a>
 		<a href="https://forum.partipirate.org/" data-href="do_start_sso.php?application=forum" 
 			title="<?php echo lang("sso_forum"); ?>" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-warning col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Forum</a>
+			target="_blank" class="btn btn-warning col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Forum</a>
 		<a href="https://lists.partipirate.org/" data-href="do_start_sso.php?application=ml" 
 			title="<?php echo lang("sso_ml"); ?>" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-warning col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">ML</a>
-	
-	
+			target="_blank" class="btn btn-warning col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">ML</a>
 	</div>
 <br>
 	<div>	
 		<a href="https://framapad.org/" title="Framapad" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-external col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Framapad</a>
+			target="_blank" class="btn btn-external col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Framapad</a>
 		<a href="https://www.opentweetbar.net/" title="OpenTweetBar" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-external col-md-2" style="height:110px; padding: 45px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">OpenTweetBar</a>
-	
-	
+			target="_blank" class="btn btn-external col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">OpenTweetBar</a>
 	</div>
 <br>
 	<div>	
