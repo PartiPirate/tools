@@ -61,9 +61,9 @@ if ($isConnected) {
 	</div>
 <br>
 	<div>	
-		<button class="btn btn-success btn-xs">Applications accessibles directement sans réidentification</button>
-		<button class="btn btn-warning  btn-xs">Application où vous devez vous réidentifier</button><br />
-		<button class="btn btn-external  btn-xs">Application externes utilisées par les Pirates</button>
+		<button class="btn btn-success btn-xs" style="margin: 5px">Applications accessibles directement sans réidentification</button>
+		<button class="btn btn-warning btn-xs" style="margin: 5px;">Application où vous devez vous réidentifier</button><br />
+		<button class="btn btn-external btn-xs" style="margin: 5px;">Application externes utilisées par les Pirates</button>
 	</div>
 <br>
 </div>
