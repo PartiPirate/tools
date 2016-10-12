@@ -177,7 +177,7 @@ $lang["skill_level_good"] = "Bon niveau";
 $lang["skill_level_advanced"] = "Avancé";
 $lang["skill_level_expert"] = "Expert";
 
-$lang["skill_endorsment_need_approval"] = "{identity} a indiqué être {level} en &laquo;&nbsp;{skill}&nbsp;&raquo;";
+$lang["skill_endorsment_need_approval"] = "<a href='https://personae.partipirate.org/member.php?id={id}'>{identity}</a> a indiqué être {level} en &laquo;&nbsp;{skill}&nbsp;&raquo;";
 $lang["skill_endorsment_level_concepts"] = "novice";
 $lang["skill_endorsment_level_average"] = "d'un niveau moyen";
 $lang["skill_endorsment_level_good"] = "d'un bon niveau";

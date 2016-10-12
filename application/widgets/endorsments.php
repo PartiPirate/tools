@@ -44,6 +44,7 @@ if ($isConnected) {
 			<?php 
 				$message = lang("skill_endorsment_need_approval");
 				
+				$message = str_replace("{id}", $randomUserSkill["id_adh"], $message);
 				$message = str_replace("{identity}", GaletteBo::showIdentity($randomUserSkill), $message);
 				$message = str_replace("{level}", lang("skill_endorsment_level_" . $randomUserSkill["sus_level"]), $message);
 				$message = str_replace("{skill}", $randomUserSkill["ski_label"], $message);
