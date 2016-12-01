@@ -19,7 +19,7 @@ function compress($buffer) {
 	return $buffer;
 }
 
-if (!$css || isset($_REQUEST["renew"])) {
+if (!$css || isset($_REQUEST["renew"]) || true) {
 	ob_start();
 	
 	/* css files for combining */
