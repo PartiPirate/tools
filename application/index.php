@@ -20,7 +20,11 @@ include_once("header.php");
 
 ?>
 
+<div class="pull-left">
 <?php include("widgets/my_skills.php"); ?>
+<?php include("widgets/help.php"); ?>
+</div>
+
 <?php include("widgets/endorsments.php"); ?>
 
 <div class="container theme-showcase" role="main" id="main" tabindex="-1">

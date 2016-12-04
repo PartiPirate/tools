@@ -398,18 +398,18 @@ a.skip-main:focus, a.skip-main:active {
     z-index:999;
 }
 
-#panel-skills {
+#panel-skills, #panel-help {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     width: calc((1920px - 1240px) / 2);
     max-width: calc((1920px - 1240px) / 2);
 }
 
-#panel-skills .panel-heading {
+#panel-skills .panel-heading, #panel-help .panel-heading {
     border-top-left-radius: 0;
 }
 
-#panel-skills .panel-footer {
+#panel-skills .panel-footer, #panel-help .panel-footer {
     border-bottom-left-radius: 0;
 }
 
