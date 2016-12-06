@@ -57,6 +57,8 @@ if(!isset(\$config)) {
 \$config[\"server\"][\"line\"] = \"" . $_REQUEST["server_line_input"] . "\";
 \$config[\"server\"][\"timezone\"] = \"" . $_REQUEST["server_timezone_input"] . "\";
 
+\$config[\"discourse\"][\"api_key\"] = \"" . $_REQUEST["discourse_api_key_input"] . "\";
+		
 ?>";
 
 // mail.config.php

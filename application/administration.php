@@ -128,6 +128,33 @@ include_once("header.php");
 			</div>
 		</div>
 	
+		<div id="discourse-panel" class="panel panel-default">
+			<div class="panel-heading">
+				<a data-toggle="collapse" data-target="#discourse-panel-body" class="collapsed" href="#"><?php echo lang("administration_discourse"); ?></a>
+			</div>
+			<div class="panel-body panel-collapse collapse " id="discourse-panel-body">
+			
+				<div class="form-group">
+<!-- 				
+					<label class="col-md-2 control-label" for="discourse_host_input"><?php echo lang("administration_discourse_host"); ?></label>
+					<div class="col-md-4">
+						<input id="discourse_host_input" name="discourse_host_input" type="text" value="<?php echo $config["discourse"]["api_key"] ?>" placeholder="placeholder" class="form-control input-md"> 
+					</div>
+					<label class="col-md-2 control-label" for="discourse_port_input"><?php echo lang("administration_discourse_port"); ?></label>
+					<div class="col-md-4">
+						<input id="discourse_port_input" name="discourse_port_input" type="text" value="<?php echo $config["discourse"]["api_key"] ?>" placeholder="placeholder" class="form-control input-md"> 
+					</div>
+ -->					
+					<label class="col-md-2 control-label" for="discourse_api_key_input"><?php echo lang("administration_discourse_api_key"); ?></label>
+					<div class="col-md-10">
+						<input id="discourse_api_key_input" name="discourse_api_key_input" type="text" value="<?php echo $config["discourse"]["api_key"] ?>" placeholder="placeholder" class="form-control input-md"> 
+						<!-- <span class="help-block">help</span> -->
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	
 		<div id="memcached-panel" class="panel panel-default">
 			<div class="panel-heading">
 				<a data-toggle="collapse" data-target="#memcached-panel-body" class="collapsed" href="#"><?php echo lang("administration_memcached"); ?></a>

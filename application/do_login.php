@@ -22,6 +22,7 @@ require_once("engine/utils/LogUtils.php");
 require_once("engine/bo/GaletteBo.php");
 require_once("engine/bo/RedmineBo.php");
 require_once("engine/authenticators/GaletteAuthenticator.php");
+require_once("engine/discourse/DiscourseAPI.php");
 
 session_start();
 
@@ -32,6 +33,8 @@ $connection = openConnection();
 $galetteAuthenticator = GaletteAuthenticator::newInstance($connection, $config["galette"]["db"]);
 
 $redmineBo = RedmineBo::newInstance($connection, $config["redmine"]["db"]);
+
+$discourseApi = new richp10\discourseAPI\DiscourseAPI("127.0.0.1:480", $config["discourse"]["api_key"], "http");
 
 $login = $_REQUEST["login"];
 $password = $_REQUEST["password"];
@@ -72,6 +75,11 @@ if ($member) {
 		$_SESSION["redmineUser"] = json_encode($redmineUser);
 	}
 
+	$result = $discourseApi->getUserByEmail($member["email_adh"]);
+	if (!$result) {
+		$result = $discourseApi->createUser($member["nom_adh"] . " " . $member["prenom_adh"], $member["pseudo_adh"], $member["email_adh"], $password, true);
+	}
+	
 //		exit();
 }
 else {
