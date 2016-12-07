@@ -77,7 +77,7 @@ if ($member) {
 
 	$result = $discourseApi->getUserByEmail($member["email_adh"]);
 	if (!$result) {
-		$result = $discourseApi->createUser($member["nom_adh"] . " " . $member["prenom_adh"], $member["pseudo_adh"], $member["email_adh"], $password, true);
+		$result = $discourseApi->createUser($member["nom_adh"] . " " . $member["prenom_adh"], GaletteBo::showIdentity($member), $member["email_adh"], $password, true);
 	}
 	
 //		exit();
