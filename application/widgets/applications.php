@@ -40,12 +40,9 @@ if ($isConnected) {
 		<a href="https://wiki.partipirate.org/" data-href="do_start_sso.php?application=wiki" 
 			title="<?php echo lang("sso_wiki"); ?>" data-toggle="tooltip" data-placement="bottom"
 			target="_blank" class="btn btn-warning col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Wiki</a>
-		<a href="https://forum.partipirate.org/" data-href="do_start_sso.php?application=forum" 
-			title="<?php echo lang("sso_forum"); ?>" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-warning col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Forum</a>
-		<a href="https://lists.partipirate.org/" data-href="do_start_sso.php?application=ml" 
-			title="<?php echo lang("sso_ml"); ?>" data-toggle="tooltip" data-placement="bottom"
-			target="_blank" class="btn btn-warning col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">ML</a>
+		<a href="https://discourse.partipirate.org/" data-href="do_start_sso.php?application=discourse" 
+			title="<?php echo lang("sso_discourse"); ?>" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-warning col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Discourse (Forum + ML)</a>
 	</div>
 <br>
 	<div>	

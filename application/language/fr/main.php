@@ -127,6 +127,7 @@ $lang["sso_redmine"] = "Outil de suivi des demandes et projets du Parti Pirate";
 $lang["sso_wiki"] = "Wiki du Parti Pirate";
 $lang["sso_forum"] = "Forum du Parti Pirate";
 $lang["sso_ml"] = "Mailing Lists du Parti Pirate";
+$lang["sso_discourse"] = "Outil de remplacement des ML et Forum du Parti Pirate";
 
 $lang["connect_guide"] = "Bienvenue sur l'écran de connexion de Fabrilia";
 $lang["connect_form_legend"] = "Connexion";
