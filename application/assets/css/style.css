@@ -451,6 +451,15 @@ a.skip-main:focus, a.skip-main:active {
 
 .btn-external:hover,
 .btn-external:focus {
+  color: #fff;
   background-color: #417796;
   background-position: 0 -15px;
+}
+
+body > div a {
+	text-decoration: underline !important;
+}
+
+a.btn {
+	text-decoration: none !important;
 }
