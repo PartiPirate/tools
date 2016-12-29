@@ -51,7 +51,6 @@
 <!--
 <script src="assets/js/pagination.js"></script>
  -->
-
 <!-- <?php echo "js/perpage/" . $page . ".js"; ?> -->
 <?php
 if (is_file("assets/js/perpage/" . $page . ".js")) {
