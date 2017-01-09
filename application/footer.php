@@ -1,20 +1,20 @@
 <?php /*
-	Copyright 2014-2015 Cédric Levieux, Jérémy Collot, ArmagNet
+	Copyright 2016 Cédric Levieux, Parti Pirate
 
-	This file is part of OpenTweetBar.
+	This file is part of Fabrilia.
 
-    OpenTweetBar is free software: you can redistribute it and/or modify
+    Fabrilia is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    OpenTweetBar is distributed in the hope that it will be useful,
+    Fabrilia is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with OpenTweetBar.  If not, see <http://www.gnu.org/licenses/>.
+    along with Fabrilia.  If not, see <http://www.gnu.org/licenses/>.
 */
 ?>
 <nav id="footer" class="navbar navbar-inverse navbar-bottom" role="navigation">
@@ -47,11 +47,10 @@
 <script src="assets/js/window.js"></script>
 <script src="assets/js/editor.js"></script>
 <script src="assets/js/search.js"></script>
- -->
+-->
 <!--
 <script src="assets/js/pagination.js"></script>
- -->
-
+-->
 <!-- <?php echo "js/perpage/" . $page . ".js"; ?> -->
 <?php
 if (is_file("assets/js/perpage/" . $page . ".js")) {
