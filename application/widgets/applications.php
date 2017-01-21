@@ -46,6 +46,8 @@ if ($isConnected) {
 	</div>
 <br>
 	<div>	
+		<a href="mumble://<?php echo $sessionUser["pseudo_adh"]; ?>@mumble.partipirate.org/?version=1.2.0" title="<?php echo lang("sso_mumble"); ?>" data-toggle="tooltip" data-placement="bottom"
+			target="_blank" class="btn btn-success col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Mumble</a>
 		<a href="https://framapad.org/" title="Framapad" data-toggle="tooltip" data-placement="bottom"
 			target="_blank" class="btn btn-external col-md-2" style="height: 70px; padding: 25px 0 0 0; margin-left: 10px; margin-right: 10px; float: none;">Framapad</a>
 		<a href="https://www.opentweetbar.net/" title="OpenTweetBar" data-toggle="tooltip" data-placement="bottom"

@@ -77,7 +77,7 @@ if ($isConnected) {
 
 <?php 	if ($isConnected) {?>
 
-	<form action="https://adhesion.partipirate.org/join.php" method="post">
+	<form action="https://adhesion.partipirate.org/index.php" method="post">
 		<input type="hidden" value="" id="join-member-input" name="join-member-input"/>
 		<button id="join-submit-button" class="btn btn-default btn-lg btn-block" type="submit">Réadhérer</button>
 	</form>
