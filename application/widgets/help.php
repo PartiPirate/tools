@@ -25,14 +25,15 @@
 		<div class="panel-body row-striped row-hover" style="padding: 0 15px;">
 Tu t'ennuies, tu connais PHP, tu veux filer un coup de main ? Le dépot git est là : <a href="https://github.com/PartiPirate/" target="_blank">https://github.com/PartiPirate/</a><br>
 <br>
-Les projets en cours sont : 
-	<a href="https://github.com/PartiPirate/gerermacampagne">gerermacampagne</a>, 
-	<a href="https://github.com/PartiPirate/tools">tools</a>, 
-	<a href="https://github.com/PartiPirate/congressus">congressus</a>, 
-	<a href="https://github.com/PartiPirate/personae">personae</a>, 
-	<a href="https://github.com/PartiPirate/pave">pave</a>, 
-	<a href="https://github.com/PartiPirate/recrutement2017">recrutement2017</a><br>
-<br>
+Les projets en cours sont :
+	<ul>
+		<ol><a href="https://github.com/PartiPirate/gerermacampagne">gerermacampagne</a></ol>
+		<ol><a href="https://github.com/PartiPirate/tools">tools</a></ol>
+		<ol><a href="https://github.com/PartiPirate/congressus">congressus</a></ol>
+		<ol><a href="https://github.com/PartiPirate/personae">personae</a></ol>
+		<ol><a href="https://github.com/PartiPirate/pave">pave</a></ol>
+		<ol><a href="https://github.com/PartiPirate/recrutement2017">recrutement2017</a></ol>
+	</ul>
 Les issues sont visibles<br>
 Les push request sont possibles<br>
 <br>
