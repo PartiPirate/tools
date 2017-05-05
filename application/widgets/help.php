@@ -19,6 +19,9 @@
 ?>
 <div id="help">
 	<div id="panel-help" class="panel panel-default pull-left" style="z-index: 1000;">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="javascript:document.getElementById('help').style.display='none';">
+			<span aria-hidden="true">×</span>
+		</button>
 		<div class="panel-heading">
 			<h3 class="panel-title">De l'aide ?</h3>
 		</div>
