@@ -27,19 +27,18 @@ Tu t'ennuies, tu connais PHP, tu veux filer un coup de main ? Le dépot git est 
 <br>
 Les projets en cours sont :
 	<ul>
-		<ol><a href="https://github.com/PartiPirate/gerermacampagne">gerermacampagne</a></ol>
-		<ol><a href="https://github.com/PartiPirate/tools">tools</a></ol>
-		<ol><a href="https://github.com/PartiPirate/congressus">congressus</a></ol>
-		<ol><a href="https://github.com/PartiPirate/personae">personae</a></ol>
-		<ol><a href="https://github.com/PartiPirate/pave">pave</a></ol>
-		<ol><a href="https://github.com/PartiPirate/recrutement2017">recrutement2017</a></ol>
+		<li><a href="https://github.com/PartiPirate/gerermacampagne">gerermacampagne</a></li>
+		<li><a href="https://github.com/PartiPirate/tools">tools</a></li>
+		<li><a href="https://github.com/PartiPirate/congressus">congressus</a></li>
+		<li><a href="https://github.com/PartiPirate/personae">personae</a></li>
+		<li><a href="https://github.com/PartiPirate/pave">pave</a></li>
+		<li><a href="https://github.com/PartiPirate/recrutement2017">recrutement2017</a></li>
 	</ul>
 Les issues sont visibles<br>
 Les push request sont possibles<br>
 <br>
 Merci<br>
-<br>
-L'<a href="mailto://contact[DOT]ektek[AT]discourse[DOT]partipirate[DOT]org">EKTEK</a>
+<div class="pull-right">L'<a href="mailto://contact[DOT]ektek[AT]discourse[DOT]partipirate[DOT]org">EKTEK</a></div>
 		</div>
 	</div>
 </div>
