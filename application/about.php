@@ -62,7 +62,7 @@ include_once("header.php");
 			<div class="panel-heading" id="releases"><?php echo lang("about_releases_legend"); ?></div>
 			<div class="panel-body"><?php echo lang("about_releases_content"); ?></div>
 			<ul class="list-group">
-				<li class="list-group-item"><a href="https://github.com/PartiPirate/fabrilia"
+				<li class="list-group-item"><a href="https://github.com/PartiPirate/tools"
 						target="_blank">Github Repository</a><span class="badge"><a class="color-inherit"
 						href="https://github.com/PartiPirate/tools" target="_blank"><span
 						class="glyphicon glyphicon-chevron-right"></span></a></span></li>
