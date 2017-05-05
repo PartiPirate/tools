@@ -16,19 +16,8 @@
     You should have received a copy of the GNU General Public License
     along with Fabrilia.  If not, see <http://www.gnu.org/licenses/>.
 */
-
-$lang["about_what_s_opentweetbar_legend"] = "What is Fabrilia ?";
-$lang["about_what_s_opentweetbar_content"] = "Fabrilia is a web application allowing the proposal of a tweet for a
-twitter account community type, its validation by its community and therefore taking a comprehensive
-and thoughtful responsibility for communication.<br />
-<br />
-It allows to handle lists of users, each with a score during validation to give more or less weight to a person for
-the validation of a tweet (a spokesperson can have more weight than a member of an association, and it may
-take, for example, 3 members for a validation or 1 member and 1 spokesperson).<br />
-<br />
-The tool also allows to avoid giving everyone access to the managed Twitter account and termination of the rights
-of a person no longer involves changing the password of the Twitter account, and finally know who proposed what
-and who validated, allowing facilitating your role as a communicator and an editor.";
+$lang["about_what_s_fabrilia_legend"] = "What is Fabrilia?";
+$lang["about_what_s_fabrilia_content"] = "Fabrilia is a web application build to help managing the various and existing tools of the French Pirate Partyi Pirate.";
 
 $lang["about_help_us_legend"] = "Help us";
 $lang["about_help_us_content"] = "Fabrilia is published by the 1901 law association <a href=\"https://www.armagnet.fr/\">ArmagNet</a>. You can help us by donations so that we can:
