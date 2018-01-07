@@ -60,7 +60,7 @@ class GaletteAuthenticator {
 		$query = "	SELECT *
 					FROM ".$this->database."galette_adherents
 					WHERE
-						login_adh = :login OR email_adh = :login \n";
+						pseudo_adh = :login OR login_adh = :login OR email_adh = :login \n";
 
 		$args = array("login" => $login);
 		$statement = $this->pdo->prepare($query);
