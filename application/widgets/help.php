@@ -32,7 +32,9 @@ Les projets en cours sont :
 		<li><a href="https://github.com/PartiPirate/congressus">congressus</a></li>
 		<li><a href="https://github.com/PartiPirate/personae">personae</a></li>
 		<li><a href="https://github.com/PartiPirate/pave">pave</a></li>
+<!--		
 		<li><a href="https://github.com/PartiPirate/recrutement2017">recrutement2017</a></li>
+-->
 	</ul>
 Les issues sont visibles<br>
 Les push request sont possibles<br>

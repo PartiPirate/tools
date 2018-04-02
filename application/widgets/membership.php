@@ -27,11 +27,18 @@ if ($isConnected) {
 	$expirationDate = new DateTime($member["date_echeance"]);
 	$now = new DateTime();
 
-	$diff = $expirationDate->diff($now);
+//	$diff = $expirationDate->diff($now);
+	$diff = $now->diff($expirationDate);
+
 
 	$expirationClass = "text-success";
+		$message = lang("index_membership");
 
-	if ($diff->days < 8) {
+	if ($diff->format("%R") == "-") {
+		$expirationClass = "text-danger";
+		$message = lang("index_membership_nomore");
+	}
+	else if ($diff->days < 8) {
 		$expirationClass = "text-danger";
 	}
 	else if ($diff->days < 15) {
@@ -42,7 +49,6 @@ if ($isConnected) {
 
 	<div class="well well-sm <?php echo $expirationClass; ?>">
 		<?php 
-			$message = lang("index_membership");
 			$message = str_replace("{days}", $diff->days, $message);
 			$message = str_replace("{date}", $expirationDate->format(lang("date_format")), $message);
 

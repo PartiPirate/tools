@@ -109,6 +109,7 @@ $lang["breadcrumb_administration"] = "Administration";
 $lang["index_guide"] = "Fabrilia est la boîte à outil du Parti Pirate.";
 $lang["index_connect_button"] = "Se connecter";
 $lang["index_membership"] = "Il vous reste {days} jours avant d'avoir besoin de <a href=\"rejoin.php\">réadhérer</a>. Fin le {date}.";
+$lang["index_membership_nomore"] = "Vous êtes en retard de {days} jours. <a href=\"rejoin.php\">Réadhérer</a>. Fin de votre adhésion le {date}.";
 $lang["index_redmine_no_account"] = "Vous n'avez pas de compte sur l'outil Redmine.";
 $lang["index_redmine_not_same_password"] = "Votre mot de passe Redmine est différent de celui utilisé de manière centralisée. Voulez-vous le mettre à jour ? ";
 
