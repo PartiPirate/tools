@@ -17,6 +17,7 @@
     along with Fabrilia.  If not, see <http://www.gnu.org/licenses/>.
 */
 @include_once("config/config.php");
+@include_once("config/modules.config.php");
 @include_once("config/salt.php");
 
 function openConnection($dbname = null) {
@@ -25,7 +26,7 @@ function openConnection($dbname = null) {
 		$dbname = $config["database"]["database"];
 	}
 
-	$dns = 'mysql:host='.$config["database"]["host"].';dbname=' . $dbname;
+	$dns = $config["database"]["dialect"].':host='.$config["database"]["host"].';dbname=' . $dbname;
 
 	if (isset($config["database"]["port"])) {
 		$dns .= ";port=" . $config["database"]["port"];
