@@ -1,5 +1,5 @@
 <?php /*
-	Copyright 2016 Cédric Levieux, Parti Pirate
+	Copyright 2016-2019 Cédric Levieux, Parti Pirate
 
 	This file is part of Fabrilia.
 
@@ -17,6 +17,11 @@
     along with Fabrilia.  If not, see <http://www.gnu.org/licenses/>.
 */
 ?>
+
+<div class="watermark">
+    <div class="watermark-inside"></div>    
+</div>
+
 <nav id="footer" class="navbar navbar-inverse navbar-bottom" role="navigation">
 
 	<ul class="nav navbar-nav">
