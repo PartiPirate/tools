@@ -52,7 +52,7 @@ include_once("header.php");
 			<div class="panel-body"><?php echo lang("about_contact_us_content"); ?></div>
 			<ul class="list-group">
 				<li class="list-group-item"><a class="social grey twitter" href="https://www.twitter.com/@PartiPirate" target="_blank">@PartiPirate</a><span class="badge"><a class="color-inherit" href="https://www.twitter.com/@PartiPirate" target="_blank"><span class="glyphicon glyphicon-chevron-right"></span></a></span></li>
-				<li class="list-group-item"><a class="social grey e-mail" href="mailto://contact[@]partipirate[.]fr" target="_blank">contact[@]partipirate[.]fr</a><span class="badge"><a class="color-inherit" href="mailto://contact[@]partipirate[.]fr" target="_blank"><span class="glyphicon glyphicon-chevron-right"></span></a></span></li>
+				<li class="list-group-item"><a class="social grey e-mail" href="mailto:contact[@]partipirate[.]fr" target="_blank">contact[@]partipirate[.]fr</a><span class="badge"><a class="color-inherit" href="mailto:contact[@]partipirate[.]fr" target="_blank"><span class="glyphicon glyphicon-chevron-right"></span></a></span></li>
 			</ul>
 		</div>
 	</div>

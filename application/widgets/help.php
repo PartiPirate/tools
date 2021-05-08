@@ -40,7 +40,7 @@ Les issues sont visibles<br>
 Les push request sont possibles<br>
 <br>
 Merci<br>
-<div class="pull-right">L'<a href="mailto://contact[DOT]ektek[AT]discourse[DOT]partipirate[DOT]org">EKTEK</a></div>
+<div class="pull-right">L'<a href="mailto:contact[DOT]ektek[AT]discourse[DOT]partipirate[DOT]org">EKTEK</a></div>
 		</div>
 	</div>
 </div>
