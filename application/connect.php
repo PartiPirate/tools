@@ -32,6 +32,12 @@ require_once("engine/utils/SessionUtils.php");
 		</p>
 	</div>
 
+	<?php if (isset($_GET["error"]) && $_GET["error"]) { ?>
+		<div class="panel panel-danger">
+			<div class="panel-body"><?php echo lang(htmlspecialchars($_GET["error"]));?></div>
+		</div>
+	<?php 	} ?>
+
 	<form id="formPanel" class="form-horizontal" action="do_login.php" method="post">
 		<fieldset>
 
